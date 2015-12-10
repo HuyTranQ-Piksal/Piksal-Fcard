@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hkhoi.fcard.SplashScreenFragments.Splash02Fragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background02"
+        android:id="@id/fragment_splashScreen_imageView_background"/>
+    <TextView
+        android:id="@id/fragment_splashScreen_textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SCREEN 2"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@color/White"/>
+
+</RelativeLayout>

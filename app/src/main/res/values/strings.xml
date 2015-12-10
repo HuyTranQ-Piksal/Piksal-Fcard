@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FCard</string>
+    <string name="preferences_firstTime">preferences_firstTime</string>
+
+    <string name="begin">Bắt đầu</string>
+
+    <!-- TODO: Add categories' strings here -->
+    <string name="category_exams">Thi cử</string>
+    <string name="category_animals">Động vật</string>
+    <string name="category_plants">Thực vật</string>
+    <string name="category_slang">Tiếng long</string>
+</resources>

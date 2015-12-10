@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hkhoi.fcard.SplashScreenFragments.Splash04Fragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@id/fragment_splashScreen_imageView_background"
+        android:src="@drawable/background02"/>
+    <TextView
+        android:id="@id/fragment_splashScreen_textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="SCREEN 4"
+        android:textColor="@color/White"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/fragment_splashScreen_button_start"
+
+        android:text="@string/begin"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="SplashScreenOnclick"/>
+
+</RelativeLayout>
