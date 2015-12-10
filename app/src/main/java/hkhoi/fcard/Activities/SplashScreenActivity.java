@@ -16,10 +16,6 @@ import hkhoi.fcard.Adapters.FragmentPagerAdapterImp;
 import hkhoi.fcard.Others.CommonUtility;
 import hkhoi.fcard.Others.ParallaxPageTransformer;
 import hkhoi.fcard.R;
-import hkhoi.fcard.SplashScreenFragments.Splash01Fragment;
-import hkhoi.fcard.SplashScreenFragments.Splash02Fragment;
-import hkhoi.fcard.SplashScreenFragments.Splash03Fragment;
-import hkhoi.fcard.SplashScreenFragments.Splash04Fragment;
 import hkhoi.fcard.SplashScreenFragments.SplashFragment;
 
 /**
