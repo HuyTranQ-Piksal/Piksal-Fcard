@@ -5,8 +5,16 @@
     <string name="begin">Bắt đầu</string>
 
     <!-- TODO: Add categories' strings here -->
+
     <string name="category_exams">Thi cử</string>
     <string name="category_animals">Động vật</string>
     <string name="category_plants">Thực vật</string>
     <string name="category_slang">Tiếng long</string>
+
+    <string-array name="categories">
+        <item>exams</item>
+        <item>animals</item>
+        <item>plants</item>
+        <item>slang</item>
+    </string-array>
 </resources>

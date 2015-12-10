@@ -38,27 +38,17 @@ public class Category {
     }
 
      public static List<Category> getDefaultCategories(Context context) {
-         if (defaultCategories == null) {
-             defaultCategories = new ArrayList<>();
+         if (defaultCategories != null)
+             return defaultCategories;
 
-             /* TODO: Add more categories here */
-             int[] titles = {
-                     R.string.category_exams,
-                     R.string.category_animals,
-                     R.string.category_plants,
-                     R.string.category_slang
-             };
-             int[] imageLinks = {
-                     R.drawable.category_exam,
-                     R.drawable.category_animal,
-                     R.drawable.category_plants,
-                     R.drawable.category_slangs
-             };
-             /* END */
-             
-            for (int i = 0; i < titles.length; ++i) {
-                defaultCategories.add(new Category(context.getString(titles[i]), imageLinks[i]));
-            }
+         defaultCategories = new ArrayList<>();
+         final String packageName = context.getPackageName();
+         String[] categories = context.getResources().getStringArray(R.array.categories);
+         for (int i = 0; i < categories.length; ++i) {
+             String identifier = "category_" + categories[i];
+             int idTitle = context.getResources().getIdentifier(identifier , "string" , packageName);
+             int idImage = context.getResources().getIdentifier(identifier , "drawable" , packageName);
+             defaultCategories.add(new Category(context.getString(idTitle), idImage));
          }
          return defaultCategories;
      }
