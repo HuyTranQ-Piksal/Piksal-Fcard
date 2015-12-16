@@ -1,6 +1,7 @@
 package hkhoi.fcard.Adapters;
 
 import android.content.Context;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,16 +31,27 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     @Override
     public CategoryHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_categories, parent, false);
-        return new CategoryHolder(view);
+        if (viewType == 0) {
+            View view = LayoutInflater.from(context).inflate(R.layout.layout_feature_packages, parent, false);
+            return new CategoryHolder(view);
+        } else {
+            View view = LayoutInflater.from(context).inflate(R.layout.item_categories, parent, false);
+            return new CategoryHolder(view);
+        }
     }
 
     @Override
     public void onBindViewHolder(CategoryHolder holder, int position) {
-        holder.textView.setText(categories.get(position).getTitle());
-        Picasso.with(context)
-                .load(categories.get(position).getIconLink())
-                .into(holder.imageView);
+        if (position != 0) {
+            holder.textView.setText(categories.get(position - 1).getTitle());
+            Picasso.with(context)
+                    .load(categories.get(position - 1).getIconLink())
+                    .into(holder.imageView);
+        } else {
+            FeaturePackagesHolder temp = (FeaturePackagesHolder) holder;
+//            temp.viewPager =
+            // TODO: DO something here
+        }
     }
 
     @Override
@@ -57,5 +69,20 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             textView = (TextView) itemView.findViewById(R.id.row_categories_textView_title);
             imageView = (ImageView) itemView.findViewById(R.id.row_categories_imageView_icon);
         }
+    }
+
+    public class FeaturePackagesHolder extends CategoryHolder {
+
+        private ViewPager viewPager;
+
+        public FeaturePackagesHolder(View itemView) {
+            super(itemView);
+            viewPager = (ViewPager) itemView.findViewById(R.id.layout_feature_viewPager);
+        }
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
     }
 }

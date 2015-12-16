@@ -14,9 +14,11 @@ import java.util.List;
 
 import hkhoi.fcard.Adapters.FragmentPagerAdapterImp;
 import hkhoi.fcard.Others.CommonUtility;
-import hkhoi.fcard.Others.ParallaxPageTransformer;
 import hkhoi.fcard.R;
-import hkhoi.fcard.SplashScreenFragments.SplashFragment;
+import hkhoi.fcard.SplashScreenFragments.Help1Fragment;
+import hkhoi.fcard.SplashScreenFragments.Help2Fragment;
+import hkhoi.fcard.SplashScreenFragments.Help3Fragment;
+import hkhoi.fcard.SplashScreenFragments.Help4Fragment;
 
 /**
  * This class accounts for introduction screen
@@ -44,26 +46,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         initFragments();
         initAdapter();
         viewPager.setAdapter(fragmentPagerAdapterImp);
-        setViewPagerTransformer();
-    }
-
-    /**
-     * Makes transforming animation more attractive :)
-     */
-    private void setViewPagerTransformer() {
-        ParallaxPageTransformer parallaxPageTransformer = new ParallaxPageTransformer();
-        parallaxPageTransformer.addViewToParallax(
-                new ParallaxPageTransformer.ParallaxTransformInformation(R.id.fragment_splash_imageView, 2, 2)
-        );
-        parallaxPageTransformer.addViewToParallax(
-                new ParallaxPageTransformer.ParallaxTransformInformation(R.id.fragment_splash_textView, -0.65f,
-                        ParallaxPageTransformer.ParallaxTransformInformation.PARALLAX_EFFECT_DEFAULT)
-        );
-        parallaxPageTransformer.addViewToParallax(
-                new ParallaxPageTransformer.ParallaxTransformInformation(R.id.fragment_splash_button, -0.5f,
-                        ParallaxPageTransformer.ParallaxTransformInformation.PARALLAX_EFFECT_DEFAULT)
-        );
-        viewPager.setPageTransformer(true, parallaxPageTransformer);
+//        setViewPagerTransformer();
     }
 
     /**
@@ -80,22 +63,10 @@ public class SplashScreenActivity extends AppCompatActivity {
      */
     private void initFragments() {
         fragments = new ArrayList<>();
-        final String type = "drawable";
-        final String packageName = getPackageName();
-        final int limit = 4;
-        for (int i = 1; i <= limit; ++i)
-        {
-            Bundle bundle = new Bundle();
-            bundle.putBoolean("isFinal", (i == limit));
-            String counter = ((i < 10) ? "0" : "") + String.valueOf(i);
-            bundle.putString("Title", "SCREEN " + counter);
-            String imageName = "background" + counter;
-            bundle.putInt("Image", getResources().getIdentifier(imageName, type, packageName));
-
-            Fragment fragment = new SplashFragment();
-            fragment.setArguments(bundle);
-            fragments.add(fragment);
-        }
+        fragments.add(new Help1Fragment());
+        fragments.add(new Help2Fragment());
+        fragments.add(new Help3Fragment());
+        fragments.add(new Help4Fragment());
     }
 
     /**
@@ -103,7 +74,7 @@ public class SplashScreenActivity extends AppCompatActivity {
      */
     public void SplashScreenOnclick(View view) {
         switch (view.getId()) {
-            case R.id.fragment_splash_button:
+            case R.id.fragment_help_button_start:
                 CommonUtility.setFirstTimeRun(this, getString(R.string.preferences_firstTime), false);
                 intent = new Intent(this, MenuActivity.class);
                 break;

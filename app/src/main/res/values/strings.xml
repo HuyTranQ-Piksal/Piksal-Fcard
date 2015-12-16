@@ -1,20 +1,171 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <string name="app_name">FCard</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="login_content">LOGIN SCREEN</string>
+
+    <string name="login_userid_text">Mã số</string>
+    <string name="login_userid_text_hint">Nhập mã số nhân viên</string>
+    <string name="login_pass_text">Mật khẩu</string>
+    <string name="login_pass_text_hint">Nhập mật khẩu cá nhân</string>
+    <string name="login_btn_text">Đăng nhập</string>
+
+    <string name="dialog_wording_ok">Đồng ý</string>
+    <string name="dialog_wording_return">Trở về</string>
+    <string name="dialog_wording_yes">Yes</string>
+    <string name="dialog_wording_no">Không</string>
+    <string name="dialog_wording_cancel">Bỏ qua</string>
+    <string name="dialog_wording_update">Update</string>
+    <string name="update_necessary">Please update if you wish to use to continue.</string>
+    <string name="neceesaly_update_dialog">Application version is old.\nPlease update to the lastest version.</string>
+    <string name="net_status_title">Lỗi kết nối</string>
+    <string name="net_status_msg">Vui lòng kết nối internet!</string>
+    <string name="dialog_error_msg_input">Lỗi nhập liệu. Xin vui lòng kiểm tra lại.</string>
+
+    <string name="google_play_url">market://details?id=abc</string>
+
+    <string name="dashboard_title">Danh sách khóa học</string>
+    <string name="pds_staff_name">Nhân viên: </string>
+    <string name="pds_creator_name">Điều phối: </string>
+    <string name="pds_creator_phone"></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_logout">Thoát</string>
+    <string name="action_settings">Thiết lập</string>
+    <string name="action_next">%1$d/%2$d</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_finish">Finish</string>
+    <string name="title_template_step">Step <xliff:g id="step_number">%1$d</xliff:g>: Lorem
+        Ipsum</string>
+
+    <string name="course_level_text">Cấp độ %1$s</string>
+
+    <string name="dialog_wording_loading">Đang xử lý</string>
+
+    <string name="payment_method_sms">Nhắn tin</string>
+    <string name="payment_method_card">Thẻ cào điện thoại</string>
+    <string name="payment_method_transfer">Chuyển khoản ngân hàng</string>
+    <string name="payment_method_promotion">Sử dụng mã khuyến mãi</string>
+    <string name="payment_method_fb">Chia sẽ Facebook để nhận được gói 1000 từ</string>
+    <string name="fb_feed_description">Học từ vựng nhanh, tiện dụng và mọi lúc mọi nơi với FCard.</string>
+    <string name="fb_feed_name">FLearn</string>
+    <string name="fb_feed_link">https://play.google.com/store/apps/details?id=vn.flearn.app.card</string>
+
+    <string-array name="payment_methods">
+        <item>Thẻ cào điện thoại</item>
+        <item>Chuyển khoản ngân hàng</item>
+    </string-array>
+
+    <string-array name="draw_navigation">
+        <item>Các gói từ</item>
+        <item>Từ đã thuộc</item>
+        <item>Từ khó</item>
+        <item>Chia sẻ</item>
+        <item>Bình chọn</item>
+        <item>Phản hồi</item>
+        <item>Thiết lập lại</item>
+        <item>Hướng dẫn</item>
+        <item>Cộng đồng</item>
+        <item>Cấu hình</item>
+    </string-array>
+
+    <string name="dialog_confirm_payment">GÓI TỪ TRẢ PHÍ \nGiá: </string>
+    <string name="dialog_confirm_payment_01">.000 VNĐ \nGiảm còn: </string>
+    <string name="dialog_confirm_payment_02">.000 VNĐ \nBạn MUA NGAY để tăng vốn từ vựng của mình?</string>
+    <string name="dialog_confirm_payment_regist">Liên hệ</string>
+    <string name="header_title_dashboard">DANH SÁCH NHÓM TỪ</string>
+    <string name="header_title_payment_method">Kênh thanh toán</string>
+    <string name="payment_method_text">Bạn vui lòng chọn kênh thanh toán:</string>
+    <string name="header_title_card_payment">Thanh toán</string>
+    <string name="btn_title_payment">Thanh toán</string>
+    <string name="btn_title_continue">Tiếp tục</string>
+    <string name="btn_title_close">Đóng ứng dụng</string>
+    <string name="payment_text_package">Gói từ vựng</string>
+    <string name="payment_text_price">Giá tiền</string>
+    <string name="payment_error_msg">Thông tin thẻ cào không hợp lệ. Vui lòng kiểm tra lại hoặc liên hệ với chúng tôi!</string>
+    <string name="payment_success_msg">Bạn đã thanh toán THÀNH CÔNG!\nVui lòng tắt ứng dụng và bật lại để kích hoạt và sử dụng gói từ vừa mua.\nXin cám ơn!</string>
+    <string name="payment_text_transfer">Bạn vui lòng chuyển khoản đến một trong các tài khoản bên dưới. Khi chuyển khoản, bạn ghi rõ Nội Dung Chuyển Khoản như sau:</string>
+    <string name="payment_text_transfer_code">%1$s - %2$s - [email hoặc số điện thoại]</string>
+    <string name="payment_text_transfer_note">*** Lưu ý:
+\n- Mã tài khoản của bạn là: %1$s
+\n- Bạn vui lòng ghi chính xác sđt hoặc email để chúng tôi thông báo tình trạng giao dịch sau khi thanh toán
+\n- Quy trình kích hoạt gói từ vựng:
+\n\t+ Bạn hoàn tất chuyển khoản
+\n\t+ Sau khi nhận tiền, chúng tôi sẽ kích hoạt gói từ vựng
+\n\t+ Chúng tôi sẽ liên lạc lại cho bạn qua email hoặc điện thoại
+\n\t+ Bạn tắt ứng dụng và mở lại
+\n\t+ Gói từ sẽ được kích hoạt</string>
+    <string name="payment_text_transfer_bank_info">Ngân hàng ACB - CN Bình Tây
+\n- Chủ TK: Vũ Tố Uyên
+\n- Số TK: 182379269
+\n\n
+Ngân hàng Đông Á - CN Cầu Kho
+\n- Chủ TK: Vũ Tố Uyên
+\n- Số TK: 0108417337
+\n\n
+Ngân hàng Techcombank - CN Thuận Kiều
+\n- Chủ TK: Vũ Tố Uyên
+\n- Số TK: 19028306932015
+\n\n
+Ngân hàng Agribank - CN Q.5
+\n- Chủ TK: Vũ Tố Uyên
+\n- Số TK: 6222205223873
+\n\n
+Ngân hàng Vietcombank - CN Nha Trang
+\n- Chủ TK: Vũ Tố Uyên
+\n- Số TK: 0061000847842</string>
+    <string name="course_text_free">FREE</string>
+    <string name="course_text_paid">PAID</string>
+    <string name="text_title_done">ĐÃ THUỘC</string>
+    <string name="text_title_difficult">KHÓ THUỘC</string>
+
+    <string name="progress_text_loading">Đang xử lý</string>
+    <string name="menu_title">MENU</string>
+    <string name="setting_sound_title">Bật âm thanh</string>
+    <string name="title_setting">Cấu hình</string>
+    <string name="sub_course_from_to">%1$d - %2$d</string>
+    <string name="sub_course_done_per_total">%1$s/%2$d</string>
+    <string name="sub_course_name_text">Phần %1$s|%2$s</string>
+    <string name="text_share_via">Chia sẽ qua</string>
+    <string name="text_share_body">Học tiếng anh hiệu quả!!!</string>
+    <string name="btn_text_using">Sử dụng</string>
+    <string name="btn_text_share_fb">Chia sẻ Facebook</string>
+    <string name="et_text_code_hint">Nhập mã khuyến mãi</string>
+    <string name="tv_promotion_guide">Nhập mã khuyến mãi bên dưới để kích hoạt gói từ vựng</string>
+
+    <string name="msg_exit_app_confirm">Bạn có muốn thoát khỏi ứng dụng không?</string>
+
+    <string name="toast_shaking_card">Các từ đã được xáo trộn!</string>
+    <string name="msg_data_loading_first_time">Đang tải dữ liệu cho lần đầu tiên. Xin vui lòng chờ trong giây lát!</string>
+
+    <string name="review_title_done">Danh sách đã thuộc</string>
+    <string name="review_title_difficult">Danh sách từ khó</string>
+
+    <string name="card_not_enough_money">Thanh toán không thành công do mệnh giá thẻ cào không đủ.</string>
+    <string name="card_buy_successfully">Thanh toán thành công. Xin vui lòng khởi động lại ứng dụng để cập nhật gói từ mới.</string>
+    <string name="successfully_posted_post">Successfully posted \'%1$s\'.\nPost ID: %2$s</string>
+    <string name="app_id">362928457193507</string>
+
+    <string name="promotion_not_success">Mã khuyến mãi không đúng hoặc đã được kích hoạt, xin vui lòng kiểm tra lại.</string>
+    <string name="promotion_already_used">Gói từ này đã được kích hoạt.</string>
+    <string name="promotion_is_activated_success">Mã khuyến mãi kích hoạt thành công.</string>
+    <string name="msg_share_app_fb">Chia sẻ ngay để nhận FREE Gói 1000 từ.</string>
+    <string name="text_word">từ</string>
+    <string name="msg_finish_reset_text">Các thiết lập của ứng dụng đã trở về mặc định ban đầu.</string>
     <string name="preferences_firstTime">preferences_firstTime</string>
 
-    <string name="begin">Bắt đầu</string>
-
-    <!-- TODO: Add categories' strings here -->
-
-    <string name="category_exams">Thi cử</string>
-    <string name="category_animals">Động vật</string>
-    <string name="category_plants">Thực vật</string>
-    <string name="category_slang">Tiếng long</string>
-
-    <string-array name="categories">
-        <item>exams</item>
-        <item>animals</item>
-        <item>plants</item>
-        <item>slang</item>
-    </string-array>
+    <string name="menu_navigation_packages">Các gói từ</string>
+    <string name="menu_navigation_learned">Từ đà thuộc</string>
+    <string name="menu_navigation_hard">Từ khó</string>
+    <string name="menu_navigation_share">Chia sẻ</string>
+    <string name="menu_navigation_feedback">Phản hồi</string>
+    <string name="menu_navigation_vote">Bình chọn</string>
+    <string name="menu_navigation_reset">Thiết lập lại</string>
+    <string name="menu_navigation_community">Cộng động</string>
+    <string name="menu_navigation_setting">Cấu hình</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>

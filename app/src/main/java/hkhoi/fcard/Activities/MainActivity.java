@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
+
 
         firstTimeKey = getString(R.string.preferences_firstTime);
         /* If this is the first-time run, then go to splash-screen */
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             intent = new Intent(this, MenuActivity.class);
         }
 
+        intent.putExtra("layout" , R.layout.activity_menu);
         startActivity(intent);
         finish();
     }

@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.SplashScreenActivity" />
-        <activity android:name=".Activities.MenuActivity"></activity>
+        <activity android:name=".Activities.MenuActivity" />
+        <activity android:name=".Activities.BaseNavigationDrawerActivity"></activity>
     </application>
 
 </manifest>
